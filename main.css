@@ -1,0 +1,40 @@
+#ListProduct {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#ListProduct td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#ListProduct tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#ListProduct tr:hover {
+    background-color: #ddd;
+}
+
+#ListProduct th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+/*Add - Done*/
+.addCreateForm{
+    display: none;
+}
+.cancelCreateForm1{
+    display: block;
+}
+/*Edit - Update*/
+.update{
+    visibility: hidden;
+}
+.update1{
+    visibility: visible;
+}

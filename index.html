@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div>
+        <button id="addProduct" onclick="CreateListProduct()">Add Product</button>
+    </div>
+</div>
+<div class="addCreateForm">
+    <input type="text" class="newProduct" name="addNewProduct" placeholder="Input Product Name">
+    <input type="number" class="newProduct" name="addNewProduct" placeholder="Input Product Price">
+    <input type="number" class="newProduct" name="addNewProduct" placeholder="Input The Number Of Product">
+    <input type="number" class="newProduct" name="addNewProduct" placeholder="Input Product Size">
+    <input type="text" class="newProduct" name="addNewProduct" placeholder="Input Product Color">
+    <button onclick="addNewProduct()">Add</button>
+</div>
+
+<table id="ListProduct">
+    <thead>
+    <th>STT</th>
+    <th>Product Name</th>
+    <th>Product Price</th>
+    <th>The Number Of Product</th>
+    <th>Size</th>
+    <th>Color</th>
+    <button type="submit" id="update" class="update" onclick="updateProduct(i)">Update</button>
+    </thead>
+    <tbody id="tableBody">
+
+    </tbody>
+</table>
+
+<link rel="stylesheet" href="main.css">
+<script src="ClotherProduct.js"></script>
+<script src="DissplayListProduct.js"></script>
+<script src="AddNewProduct.js"></script>
+<script src="EditProduct.js"></script>
+<script src="Delete.js"></script>
+</body>
+</html>

@@ -53,11 +53,18 @@ class ClotherProduct {
 
 
 //Khởi tạo đối tượng-Test
-let a = new ClotherProduct("Quần",45000,1,42,"Black");
-let b = new ClotherProduct("Áo",45000,1,42,"White");
+// let a = new ClotherProduct("Quần",45000,1,42,"Black");
+// let b = new ClotherProduct("Áo",45000,1,42,"White");
 
-let newarrayproduct = [];
-newarrayproduct.push(a);
-newarrayproduct.push(b);
+// let newArrayProduct = [];
+// console.log(newArrayProduct);
+
+
+// console.log(a.getname());
+// a.setName('Phát đẹp trai');
+// newarrayproduct.push(a);
+// newarrayproduct.push(b);
+
+// console.log(a.getname());
 // console.log(Array.isArray(newarrayproduct));
 // console.log(newarrayproduct);

@@ -19,12 +19,20 @@ function addNewProduct() {
     // let size = document.getElementsByClassName(`newProduct`)[3].value;
     // let color = document.getElementsByClassName(`newProduct`)[4].value;
     // let object = new ClotherProduct(name,price,number,size,color);
-    // newarrayproduct.push(object);
+    // newArrayProduct.push(object);
 
     // Cách 2
-    let q = document.querySelectorAll(`.newProduct`);
-    let object = new ClotherProduct(q[0].value,q[1].value,q[2].value,q[3].value,q[4].value);
+    let inputData = document.querySelectorAll(`.newProduct`);
+    console.log(inputData);
+    let object = new ClotherProduct(inputData[0].value, inputData[1].value, inputData[2].value, inputData[3].value, inputData[4].value);
     console.log(object);
-    newarrayproduct.push(object);
+    let data1 = JSON.parse(localStorage.getItem('DataProduct'));
+    if (!data1) {
+        data1 = [];
+    }
+    data1.push(object);
+    console.log(data1);
+    localStorage.setItem('DataProduct', JSON.stringify(data1));
+    console.log(data1);
     ShowListProduct();
 }

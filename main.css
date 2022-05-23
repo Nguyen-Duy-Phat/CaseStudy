@@ -21,7 +21,7 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #04AA6D;
+    background-color: #5D54A4;
     color: white;
 }
 /*Add - Done*/
@@ -37,4 +37,20 @@
 }
 .update1{
     visibility: visible;
+}
+#heading{
+    text-align: center;
+}
+#addProduct{
+    padding: 8px 12px;
+    margin-bottom: 15px;
+
+}
+.addCreateForm{
+    float: left;
+    margin-left: 20px;
+    margin-top: 3px;
+}
+.newProduct{
+    padding: 6px;
 }

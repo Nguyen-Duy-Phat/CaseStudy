@@ -24,15 +24,16 @@ function addNewProduct() {
     // Cách 2
     let inputData = document.querySelectorAll(`.newProduct`);
     console.log(inputData);
+
     let object = new ClotherProduct(inputData[0].value, inputData[1].value, inputData[2].value, inputData[3].value, inputData[4].value);
     console.log(object);
-    let data1 = JSON.parse(localStorage.getItem('DataProduct'));
-    if (!data1) {
-        data1 = [];
+    let data = JSON.parse(localStorage.getItem('DataProduct')) ? JSON.parse(localStorage.getItem('DataProduct')) : [];
+    if (!data) {
+        data = [];
     }
-    data1.push(object);
-    console.log(data1);
-    localStorage.setItem('DataProduct', JSON.stringify(data1));
-    console.log(data1);
+    data.push(object);
+
+    localStorage.setItem('DataProduct', JSON.stringify(data));
+
     ShowListProduct();
 }

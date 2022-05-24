@@ -1,4 +1,4 @@
-//Hàm xóa sản phẩm
+//Delete Product
 
 const deleteProduct = (index) => {
     let data = JSON.parse(localStorage.getItem('DataProduct'));

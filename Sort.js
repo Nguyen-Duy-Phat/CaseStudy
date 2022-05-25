@@ -1,4 +1,5 @@
 //Sắp xếp
+
 function sortProduct() {
     let price = document.getElementById(`mySelect`).value;
     if (price === "SortPrice") {

@@ -10,20 +10,21 @@ const updateProduct = (id) => {
                 index = i;
             }
         }
-        let a = document.getElementById(`fixvalue0`);
-        a.value = data[index].name;
-        let b = document.getElementById(`fixvalue1`);
-        b.value = data[index].price
-        let c = document.getElementById(`fixvalue2`);
-        c.value = data[index].quantity
-        let d = document.getElementById(`fixvalue3`);
-        d.value = data[index].size
-        let e = document.getElementById(`fixvalue4`);
-        e.value = data[index].color
-
+        let a = document.getElementById(`fixvalue0`).value;
+        data[index].name = (a == ""? data[index].name : a);
+        let b = document.getElementById(`fixvalue1`).value;
+        data[index].price = (b== ""? data[index].price : b);
+        let c = document.getElementById(`fixvalue2`).value;
+        data[index].quantity = (c== ""? data[index].quantity : c);
+        let d = document.getElementById(`fixvalue3`).value;
+        data[index].size = (d== ""? data[index].size : d);
+        let e = document.getElementById(`fixvalue4`).value;
+        data[index].color = (e== ""? data[index].color : e);
+        console.log(data[index])
+        localStorage.removeItem('DataProduct');
         let k = confirm(`Bạn có muốn cập nhật ?`)
         if (k) {
-            localStorage.setItem('DataProduct', JSON.stringify(data[index].name));
+            localStorage.setItem('DataProduct', JSON.stringify(data));
         }
         ShowListProduct();
     }

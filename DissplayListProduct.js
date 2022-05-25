@@ -10,13 +10,13 @@ const ShowListProduct = (index) => {
         if (index === i) {
             result +=
                 `<tr>
-            <td>Update${i}</td>
-            <td><input id="fixvalue0" type="text" class="updateProduct" name="addNewProduct" placeholder="Input Product Name"></td>
-            <td><input id="fixvalue1" type="number" class="updateProduct" name="addNewProduct" placeholder="Input Product Price"></td>
-            <td><input id="fixvalue2" type="number" class="updateProduct" name="addNewProduct" placeholder="Input The Number Of Product"></td>
-            <td><input id="fixvalue3" type="number" class="updateProduct" name="addNewProduct" placeholder="Input Product Size"></td>
-            <td><input id="fixvalue4" type="text" class="updateProduct" name="addNewProduct" placeholder="Input Product Color"></td>
-            <td colspan="2"><button style= "background-color: Blue;color: white" type="submit" class="edit" onclick="updateProduct(${i})">Update</button></td>
+            <td>Update No.${i}</td>
+            <td><input id="fixvalue0" type="text" class="updateProduct"></td>
+            <td><input id="fixvalue1" type="number" class="updateProduct" ></td>
+            <td><input id="fixvalue2" type="number" class="updateProduct"></td>
+            <td><input id="fixvalue3" type="number" class="updateProduct"></td>
+            <td><input id="fixvalue4" type="text" class="updateProduct"></td>
+            <td colspan="2"><button style= "background-color: Blue;color: white" type="submit" onclick="updateProduct(${i})">Update</button></td>
             </tr>`
         }
         result +=

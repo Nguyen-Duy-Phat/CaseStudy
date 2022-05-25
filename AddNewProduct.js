@@ -9,7 +9,6 @@ const CreateListProduct = () => {
     document.querySelector('.addCreateForm').classList.toggle(`cancelCreateForm1`);
 }
 
-
 // Hàm thêm sản phẩm
 function addNewProduct() {
     // Cách 1

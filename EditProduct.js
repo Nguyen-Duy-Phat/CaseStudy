@@ -1,41 +1,30 @@
-// Button Edit and Upddte
-const editProduct = (index) => {
-    let data = document.getElementsByClassName("DataProduct");
-
-    let flag;
-    for (let i = 0; i < data.length; i++) {
-        if (index === i) {
-            flag = i;
+// Edit UpDate
+const updateProduct = (id) => {
+    //Lấy ra vị trí
+    let data = JSON.parse(localStorage.getItem('DataProduct'));
+    if (data.length > 0) {
+        let sizedata = data.length;
+        let index;
+        for (let i = 0; i < sizedata; i++) {
+            if (id === i) {
+                index = i;
+            }
         }
-    }
-    return flag;
-}
+        let a = document.getElementById(`fixvalue0`);
+        a.value = data[index].name;
+        let b = document.getElementById(`fixvalue1`);
+        b.value = data[index].price
+        let c = document.getElementById(`fixvalue2`);
+        c.value = data[index].quantity
+        let d = document.getElementById(`fixvalue3`);
+        d.value = data[index].size
+        let e = document.getElementById(`fixvalue4`);
+        e.value = data[index].color
 
-// Button Update cả mảng
-const updateProduct = (index) => {
-
-    let k = confirm(`Bạn có muốn cập nhật ?`)
-    if (k) {
-        let data1 = JSON.parse(localStorage.getItem('DataProduct'));
-        let idproduct = editProduct();
-        console.log(editProduct());
-        if (data1[index] === idproduct){
-            data1[index].name = document.getElementById(`fixvalue0`).value;
-            data1[index].price = document.getElementById(`fixvalue1`).value;
-            data1[index].quantity = document.getElementById(`fixvalue2`).value;
-            data1[index].size = document.getElementById(`fixvalue3`).value;
-            data1[index].color = document.getElementById(`fixvalue4`).value;
+        let k = confirm(`Bạn có muốn cập nhật ?`)
+        if (k) {
+            localStorage.setItem('DataProduct', JSON.stringify(data[index].name));
         }
-        console.log(data1);
-
-        // data1[index].name = document.getElementById(`fixvalue0`).value;
-        // data1[index].size = document.getElementById(`fixvalue1`).value;
-        // data1[index].quantity = document.getElementById(`fixvalue2`).value;
-        // data1[index].size = document.getElementById(`fixvalue3`).value;
-        // data1[index].color = document.getElementById(`fixvalue4`).value;
-
-        // localStorage.removeItem('DataProduct');
-        localStorage.setItem('DataProduct', JSON.stringify(data1[index]));
         ShowListProduct();
     }
 

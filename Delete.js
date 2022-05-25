@@ -13,6 +13,3 @@ const deleteProduct = (index) => {
         ShowListProduct();
     }
 }
-
-
-//

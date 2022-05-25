@@ -6,46 +6,54 @@
 </head>
 <body>
 <div id="main">
-<h1 id="heading">QUẢN LÝ SẢN PHẨM</h1>
-<div style="float: left">
-        <button style="background-color: #4C489D;color: white" id="addProduct" onclick="CreateListProduct()">Add Product</button>
-</div>
-<div class="addCreateForm">
-    <input type="text" class="newProduct" name="addNewProduct" placeholder="Input Product Name">
-    <input type="number" class="newProduct" name="addNewProduct" placeholder="Input Product Price">
-    <input type="number" class="newProduct" name="addNewProduct" placeholder="Input The Number Of Product">
-    <input type="number" class="newProduct" name="addNewProduct" placeholder="Input Product Size">
-    <input type="text" class="newProduct" name="addNewProduct" placeholder="Input Product Color">
-    <button style="background-color: #4C489D;color: white;padding: 5px 12px" onclick="addNewProduct()">Add</button>
-</div>
-<div style="clear: left">
-    <button style="background-color: #4C489D;color: white" type="submit" onclick="Sort()">Sort Price</button>
-</div>
+    <h1 id="heading">QUẢN LÝ SẢN PHẨM</h1>
+    <div style="float: left">
+        <button style="background-color: #4C489D;color: white" id="addProduct" onclick="CreateListProduct()">Add
+            Product
+        </button>
+    </div>
+    <div class="addCreateForm">
+        <input type="text" class="newProduct" name="addNewProduct" placeholder="Input Product Name">
+        <input type="number" class="newProduct" name="addNewProduct" placeholder="Input Product Price">
+        <input type="number" class="newProduct" name="addNewProduct" placeholder="Input The Number Of Product">
+        <input type="number" class="newProduct" name="addNewProduct" placeholder="Input Product Size">
+        <input type="text" class="newProduct" name="addNewProduct" placeholder="Input Product Color">
+        <button style="background-color: #4C489D;color: white;padding: 5px 12px" onclick="addNewProduct()">Add</button>
+    </div>
+    <div style="clear: left">
+        <select id="mySelect" onchange="sortProduct()">
+            <option value = "">Select Sort</option>
+            <option value="SortPrice">Sort Price</option>
+            <option value="SortQuantity">Sort Quantity</option>
+            <option value="SortName">Sort Name</option>
+        </select>
+        <!--        <button style="background-color: #4C489D;color: white" type="submit" onclick="Sort()">Sort Price</button>-->
+    </div>
 
-<table id="ListProduct">
-    <thead>
-    <th>STT</th>
-    <th>Product Name</th>
-    <th>Product Price</th>
-    <th>The Number Of Product</th>
-    <th>Size</th>
-    <th>Color</th>
-    <th></th>
-    <th></th>
-    <button type="submit" id="update" class="update" onclick="updateProduct(i)">Update</button>
-    </thead>
-    <tbody id="tableBody">
+    <table id="ListProduct">
+        <thead>
+        <th>STT</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>The Number Of Product</th>
+        <th>Size</th>
+        <th>Color</th>
+        <th></th>
+        <th></th>
+        <button type="submit" id="update" class="update" onclick="updateProduct(i)">Update</button>
+        </thead>
+        <tbody id="tableBody">
 
-    </tbody>
-</table>
+        </tbody>
+    </table>
 
-<link rel="stylesheet" href="main.css">
-<script src="ClotherProduct.js"></script>
-<script src="DissplayListProduct.js"></script>
-<script src="AddNewProduct.js"></script>
-<script src="EditProduct.js"></script>
-<script src="Delete.js"></script>
-<script src="Sort.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="ClotherProduct.js"></script>
+    <script src="DissplayListProduct.js"></script>
+    <script src="AddNewProduct.js"></script>
+    <script src="EditProduct.js"></script>
+    <script src="Delete.js"></script>
+    <script src="Sort.js"></script>
 </div>
 </body>
 
